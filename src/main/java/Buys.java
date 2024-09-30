@@ -14,4 +14,11 @@ public class Buys {
     public double getPrice() {
         return price;
     }
+
+    @Override
+    public String
+    toString() {
+        return "Buys: price=" + price +
+                ", description='" + description;
+    }
 }
