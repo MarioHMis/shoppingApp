@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -9,7 +10,7 @@ public class Main {
         CredictCard card = new CredictCard(limit);
 
         int exit = 1;
-        while (exit != 1) {
+        while (exit != 0) {
             System.out.println("Enter the item to buy: ");
             String description = input.next();
 
@@ -30,6 +31,7 @@ public class Main {
         }
         System.out.println("*********************");
         System.out.println("PURCHASE MADE:\n");
+        Collections.sort(card.getShoppingList());
         for (Buys buys : card.getShoppingList()) {
             System.out.println(buys.getDescription() + " - " + buys.getPrice());
         }
