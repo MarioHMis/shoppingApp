@@ -7,7 +7,7 @@ public class CredictCard {
     private List<Buys> shoppingList;
 
     public CredictCard(double creditLimit) {
-        this.balance = balance;
+        this.balance = creditLimit;
         this.creditLimit = creditLimit;
         this.shoppingList = new ArrayList<>();
     }
@@ -16,7 +16,6 @@ public class CredictCard {
         if(this.balance >= buys.getPrice()){
             this.balance -= buys.getPrice();
             this.shoppingList.add(buys);
-
             return true;
         }
         return false;
@@ -33,6 +32,4 @@ public class CredictCard {
     public List<Buys> getShoppingList() {
         return shoppingList;
     }
-
-
 }

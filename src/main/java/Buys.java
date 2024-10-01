@@ -2,7 +2,7 @@ public class Buys {
     private double price;
     private String description;
 
-    public Buys(String description, double price) {
+    public Buys(double price, String description) {
         this.description = description;
         this.price = price;
     }
